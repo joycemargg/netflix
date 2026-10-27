@@ -3,155 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix Venezuela: Ve series online, ve peliculas online</title>
+    <title>Netflix Venezuela: Ve series online, ve películas online</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-       <nav>
-           <img src="images/logo.png" alt="Logo" class="logo">
-           <div>
-            <button class="language-btn">Español <img src="images/down-icon.png" alt="Español"></button>
+    <header class="header">
+       <div class="header__top">
+           <img src="images/logo.png" alt="Netflix Logo" class="logo">
+           <div class="header__actions">
+            <label class="language-control">
+                <svg class="language-globe" viewBox="0 0 20 20" aria-hidden="true">
+                    <circle cx="10" cy="10" r="8"></circle>
+                    <path d="M2 10h16M10 2a13 13 0 0 1 0 16M10 2a13 13 0 0 0 0 16M4.3 5.5h11.4M4.3 14.5h11.4"></path>
+                </svg>
+                <select class="language-select" aria-label="Idioma">
+                    <option value="es" selected>Español</option>
+                    <option value="en">Inglés</option>
+                </select>
+            </label>
             <button>Iniciar sesión</button>
 
             </div>
-        </nav>
+        </div>
        <div class="header-content">
-        <h1>Películas y series ilimitadas y mucho más</h1>
-        <h3>A partir de USD 4,99. Cancela cuando quieras.</h3>
-        <p>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</p>
-        <form class="email-signup">
-            <input type="email" placeholder="Dirección de email" required>
-            <button type="submit">Comenzar</button>
+        <h1>Películas, series de televisión y mucho más, sin límites.</h1>
+        <p class="subtitle">Mira donde quieras. Cancela cuando quieras.</p>
+        <p>¿Listo para ver el vídeo? Introduce tu correo electrónico para crear o reactivar tu suscripción.</p>
+        <form class="email-signup" aria-label="Registro de suscripción">
+            <input type="email" placeholder="Dirección de correo electrónico" aria-label="Dirección de correo electrónico" required>
+            <button type="submit">Comience</button>
         </form>
        </div>
-    </div>
-    <div class="features">
-       <!-- Primer bloque de contenido -->
-        <div class="row">
-             <div class="text-col">
-                <h2>Disfruta donde quieras.</h2>
-                <p>Disfruta de tus series y películas favoritas en tu teléfono, tablet, Smart TV, laptop o dispositivo de streaming, todo por el mismo precio.</p>
-            </div>
-            <div class="img-col">
-                <img src="images/feature-1.png" alt="Disfruta donde quieras">
-            </div>
-        </div>
-        <!-- Segundo bloque de contenido -->
-           <div class="row">
-             <div class="img-col">
-                <img src="images/feature-2.png" alt="Descarga tus series favoritas.">
-            </div>
-             <div class="text-col">
-                <h2>Descarga tus series favoritas.</h2>
-                <p>Descarga tus series y películas favoritas para verlas cuando quieras, incluso sin conexión.</p>
-            </div>
-           
-             </div>
-         <!-- Tercer bloque de contenido -->
-         <div class="row">
-             <div class="text-col">
-                <h2>Elige lo que quieras ver.</h2>
-                <p>Elige entre una amplia variedad de series y películas. Puedes verlo en cualquier momento, donde quieras.</p>
-            </div>
-            <div class="img-col">
-                <img src="images/feature-3.png" alt="Elige lo que quieras ver.">
-            </div>
-            </div> 
-         <!-- Cuarto bloque de contenido -->
-        <div class="row">
-             <div class="img-col">
-                <img src="images/feature-4.png" alt="Crea perfiles para niños.">
-            </div>
-             <div class="text-col">
-                <h2>Crea perfiles para niños.</h2>
-                <p>Envía a los niños a aventuras con sus personajes favoritos en un espacio hecho solo para ellos, gratis con tu suscripción.</p>
-            </div>
-           
-        </div>
-        
-        <div class="faq">
-            <h2>Preguntas frecuentes</h2>
-            <ul class="accordion">
-            <li>
-                <input type="radio" name="accordion" id="first">
-                <label for="first">¿Qué es Netflix?</label>
-                <div class="content">
-                    <p>Netflix es un servicio de streaming que te permite ver una amplia variedad de series, películas y documentales en tu dispositivo favorito.</p>
+    </header>
+    <main>
+        <section class="feature feature--tv" aria-labelledby="feature-tv-title">
+            <div class="feature__content">
+                 <div class="feature__text">
+                    <h2 id="feature-tv-title">Disfrútalo en tu televisor.</h2>
+                    <p>Puedes verlo en Smart TVs, Playstation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y mucho más.</p>
                 </div>
-            </li>
-            <li>
-                <input type="radio" name="accordion" id="second">
-                <label for="second">¿Cuánto cuesta Netflix?</label>
-                <div class="content">
-                    <p>Netflix cuesta desde USD 4,99 por mes. Puedes cancelar en cualquier momento.</p>
+                <div class="feature__media">
+                    <img src="images/feature-1.png" alt="Televisor mostrando Netflix">
                 </div>
-            </li>
-          <li>
-                <input type="radio" name="accordion" id="third">
-                <label for="third">¿Tienes más preguntas?</label>
-                <div class="content">
-                    <p>Si tienes más preguntas, visita nuestra sección de ayuda o contacta con nuestro servicio al cliente.</p>
+            </div>
+        </section>
+        <section class="feature feature--download" aria-labelledby="feature-download-title">
+           <div class="feature__content">
+            <div class="feature__media">
+                    <img src="images/feature-2e.png" alt="Móvil descargando contenido">
                 </div>
-            </li>
-             <li>
-                <input type="radio" name="accordion" id="fourth">
-                <label for="fourth">¿Dónde puedo ver Netflix?</label>
-                <div class="content">
-                    <p>Puedes ver Netflix en tu televisor, tablet, smartphone o computadora.</p>
+            <div class="feature__text">
+                    <h2 id="feature-download-title">Descarga tus programas para verlos sin conexión.</h2>
+                    <p>Guarda tus favoritos fácilmente y ten siempre algo que ver.</p>
                 </div>
-            </li>
-             <li>
-                <input type="radio" name="accordion" id="fifth">
-                <label for="fifth">¿Cómo puedo cancelar mi suscripción?</label>
-                <div class="content">
-                    <p>Puedes cancelar tu suscripción en cualquier momento desde tu cuenta.</p>
+            </div>
+        </section>
+        <section class="feature feature--devices" aria-labelledby="feature-devices-title">
+             <div class="feature__content">
+                 <div class="feature__text">
+                    <h2 id="feature-devices-title">Mira por todas partes.</h2>
+                    <p>Disfruta de películas y series de televisión ilimitadas en tu teléfono, tableta, ordenador portátil y televisor sin pagar de más.</p>
                 </div>
-            </li>
-             <li>
-                <input type="radio" name="accordion" id="sixth">
-                <label for="sixth">Netflix es bueno para niños?</label>
-                <div class="content">
-                    <p>Sí, Netflix ofrece una amplia variedad de contenido para niños, incluyendo series y películas que están diseñadas específicamente para ellos.</p>
+                <div class="feature__media">
+                    <img src="images/feature-3e.png" alt="Diferentes dispositivos">
                 </div>
-            </li>
-            </ul>
-            <small>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</small>
-            <form class="email-signup">
-            <input type="email" placeholder="Dirección de email" required>
-            <button type="submit">Comenzar</button>
-        </form>
-        </div>
-        <div class="footer">
-            <h2>Preguntas? llama 1-800-000</h2>
-            <div class="row">
-                <div class="col">
-                    <a href="#">Preguntas frecuentes</a>
-                    <a href="#">Relaciones con inversionistas</a>
-                    <a href="#">Privacidad</a>
-                    <a href="#">Prueba de velocidad</a>
+            </div>
+        </section>
+        <section class="feature feature--kids" aria-labelledby="feature-kids-title">
+            <div class="feature__content">
+                 <div class="feature__media">
+                    <img src="images/feature-4.png" alt="Perfil para niños">
+                </div>
+                 <div class="feature__text">
+                    <h2 id="feature-kids-title">Crea perfiles para niños.</h2>
+                    <p>Envía a tus hijos a vivir aventuras con sus personajes favoritos en un espacio creado especialmente para ellos, ¡gratis con tu membresía!</p>
+                </div>
+            </div>
+        </section>
 
-                </div>
-                <div class="col">
-                    <a href="#">Centro de ayuda</a>
-                    <a href="#">Empleo</a>
-                    <a href="#">Preferencias de cookies</a>
-                    <a href="#">Avisos legales</a>
-                </div>
-                <div class="col">
-                    <a href="#">Cuenta</a>
-                    <a href="#">Formas de ver</a>
-                    <a href="#">Información corporativa</a>
-                    <a href="#">Solo en Netflix</a>s
-                </div>
-                <div class="col">
-                    <a href="#">Prensa</a>
-                    <a href="#">Términos de uso</a>
-                    <a href="#">Contáctanos</a>
-                </div>
+        <section class="faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Preguntas frecuentes</h2>
+            <div class="faq__accordion">
+                <details>
+                    <summary>¿Qué puedo ver en Netflix?</summary>
+                    <div class="faq__answer">
+                        <p>Netflix cuenta con una extensa biblioteca de largometrajes, documentales, series de televisión, anime, producciones originales galardonadas y mucho más. Disfruta de todo el contenido que quieras, cuando quieras.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Qué es Netflix?</summary>
+                    <div class="faq__answer">
+                        <p>Netflix es un servicio de streaming que ofrece una amplia variedad de series, películas, anime, documentales y mucho más, galardonados y disponibles en miles de dispositivos con conexión a internet.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Cuánto cuesta Netflix?</summary>
+                    <div class="faq__answer">
+                        <p>Disfruta de Netflix en tu smartphone, tablet, Smart TV, portátil o dispositivo de streaming por una cuota mensual fija. Los planes van desde 7,99 € hasta 17,99 € al mes. Sin costes adicionales ni contratos.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Dónde puedo verlo?</summary>
+                    <div class="faq__answer">
+                        <p>Disfruta donde y cuando quieras. Inicia sesión con tu cuenta de Netflix para ver contenido al instante en la web en netflix.com desde tu ordenador o cualquier dispositivo con conexión a internet que tenga la app de Netflix, como Smart TV, smartphones, tablets, reproductores multimedia y consolas de videojuegos.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Cómo puedo cancelar?</summary>
+                    <div class="faq__answer">
+                        <p>Netflix es flexible. No hay contratos complicados ni compromisos. Puedes cancelar tu cuenta fácilmente en línea con solo dos clics. No hay cargos por cancelación: activa o desactiva tu cuenta cuando quieras.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>¿Es Netflix bueno para los niños?</summary>
+                    <div class="faq__answer">
+                        <p>La experiencia Netflix Kids está incluida en tu suscripción para que los padres tengan el control mientras los niños disfrutan de series y películas para toda la familia en su propio espacio.</p>
+                    </div>
+                </details>
             </div>
-            <button class="language-btn">Español <img src="images/down-icon.png" alt="Español"></button>
-            <p class="copyright-txt">© 2023 Netflix, Inc. Todos los derechos reservados.</p>
-        </div>
+            <p>¿Listo para ver el vídeo? Introduce tu correo electrónico para crear o reactivar tu suscripción.</p>
+            <form class="email-signup" aria-label="Registro después de preguntas frecuentes">
+                <input type="email" placeholder="Dirección de correo electrónico" aria-label="Dirección de correo electrónico" required>
+                <button type="submit">Comience</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>¿Preguntas? Llama al <a href="tel:1-800-000">1-800-000</a></p>
+        <nav class="footer__navigation" aria-label="Enlaces del pie de página">
+            <div class="footer__links">
+                <ul class="footer__column">
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Relaciones con inversionistas</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Prueba de velocidad</a></li>
+                </ul>
+                <ul class="footer__column">
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Empleo</a></li>
+                    <li><a href="#">Preferencias de cookies</a></li>
+                    <li><a href="#">Avisos legales</a></li>
+                </ul>
+                <ul class="footer__column">
+                    <li><a href="#">Cuenta</a></li>
+                    <li><a href="#">Formas de ver</a></li>
+                    <li><a href="#">Información corporativa</a></li>
+                    <li><a href="#">Solo en Netflix</a></li>
+                </ul>
+                <ul class="footer__column">
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Términos de uso</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+        </nav>
+        <label class="language-control">
+            <svg class="language-globe" viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="10" cy="10" r="8"></circle>
+                <path d="M2 10h16M10 2a13 13 0 0 1 0 16M10 2a13 13 0 0 0 0 16M4.3 5.5h11.4M4.3 14.5h11.4"></path>
+            </svg>
+            <select class="language-select" aria-label="Idioma">
+                <option value="es" selected>Español</option>
+                <option value="en">Inglés</option>
+            </select>
+        </label>
+        <p class="copyright-txt">© 2022 Netflix, Inc. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.querySelectorAll(".faq__accordion details").forEach((detail) => {
+            detail.addEventListener("toggle", () => {
+                if (detail.open) {
+                    document.querySelectorAll(".faq__accordion details").forEach((otherDetail) => {
+                        if (otherDetail !== detail) {
+                            otherDetail.open = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        document.querySelectorAll(".language-select").forEach((select) => {
+            select.addEventListener("change", () => {
+                document.querySelectorAll(".language-select").forEach((otherSelect) => {
+                    otherSelect.value = select.value;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
